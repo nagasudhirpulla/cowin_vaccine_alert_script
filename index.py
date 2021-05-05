@@ -27,6 +27,6 @@ def checkSessions():
                 sendMail(host, port, mailUsername, mailPass, msg, fromMail, toMail, sub)
 
 while True:
-    # starting to check for vaccine sessions tomorrow 
+    print("starting to check for vaccine sessions tomorrow")
     checkSessions()
     time.sleep(10)
