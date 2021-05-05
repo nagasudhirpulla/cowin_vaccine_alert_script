@@ -28,7 +28,10 @@ def checkSessions(reqDt):
         if any([c["available_capacity"]>0 for c in capacityInfos]):
             reqDtStr = dt.datetime.strftime(reqDt, "%d-%b-%Y")
             msg = "Please check Cowin portal <a href=https://www.cowin.gov.in/home>https://www.cowin.gov.in/home</a> for vaccine booking on {0} for age less than 45 years <br> ".format(reqDtStr)
-            capacityStrs = ["Available capacity = {0}, {1}, {2}".format(c["available_capacity"], c["name"], c["address"]) for c in capacityInfos]
+            try:
+                capacityStrs = ["Available capacity = {0}, {1}, {2}".format(c["available_capacity"], c["name"], c["address"]) for c in capacityInfos]
+            except:
+                capacityStrs = [str(c) for c in capacityInfos]
             msg += '<br>'.join(capacityStrs) 
             sendMail(host, port, mailUsername, mailPass, msg, fromMail, toMail, sub)
             isMailSent = True
