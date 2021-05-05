@@ -1,0 +1,9 @@
+{
+    "districtId": 395,
+    "port": 123,
+    "host": "google.com",
+    "mailUsername": "uname",
+    "mailPass": "pass",
+    "fromMail": "from@outlook.com",
+    "toMail": "to@outlook.com"
+}
