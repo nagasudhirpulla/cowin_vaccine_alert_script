@@ -10,6 +10,7 @@ def getSessionsInDistrict(distId, dateObj):
     params={"district_id": distId, "date": dateStr})
 
     if not resp.status_code == 200:
+        print(resp.status_code)
         print("unable to get sessions from server")
         return []
     respJson = resp.json()
