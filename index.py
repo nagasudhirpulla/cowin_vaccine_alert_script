@@ -35,12 +35,15 @@ def checkSessions(reqDt):
     return isMailSent
 
 while True:
-    print("starting to check for vaccine sessions for next {0} days".format(numDays))
+    print("{0}: starting to check for vaccine sessions for next {1} days".format(dt.datetime.now(), numDays))
     isMailSent = False
-    for d in datesList:
-        mailSentResult = checkSessions(d)
-        if mailSentResult == True:
-            isMailSent = True
-    if isMailSent:
-        mailSentAt = dt.datetime.now()
+    try:
+        for d in datesList:
+            mailSentResult = checkSessions(d)
+            if mailSentResult == True:
+                isMailSent = True
+        if isMailSent:
+            mailSentAt = dt.datetime.now()
+    except:
+        print("error occurred")
     time.sleep(10)
