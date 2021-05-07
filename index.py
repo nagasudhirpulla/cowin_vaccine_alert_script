@@ -38,7 +38,7 @@ def checkSessions(reqDt):
                     capacityStrs = [str(c) for c in capacityInfos]
                 msg += '<br>'.join(capacityStrs) 
                 sub = "Cowin portal Vaccine Availability alert in {0}".format(distName)
-                sendMail(host, port, mailUsername, mailPass, msg, fromMail, [toMails], sub)
+                sendMail(host, port, mailUsername, mailPass, msg, fromMail, toMails, sub)
                 isMailSent = True
     return isMailSent
 

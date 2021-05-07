@@ -8,6 +8,6 @@ def sendMail(host,port,uname,passwd,msg,from_mail,to_mail,subject):
     server.starttls()
     server.login(uname,passwd)
     message.attach(MIMEText(msg,'html'))
-    server.sendmail(from_mail, (to_mail), message.as_string())
+    server.sendmail(from_mail, to_mail, message.as_string())
     server.quit()
     return
