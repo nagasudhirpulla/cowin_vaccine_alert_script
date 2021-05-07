@@ -11,4 +11,4 @@ toMail = appConf["toMail"]
 msg = "Please check Cowin portal <a href=https://www.cowin.gov.in/home>https://www.cowin.gov.in/home</a> for vaccine booking for age less than 45 years"
 sub = "Cowin portal Vaccine Availability alert"
 
-sendMail(host, port, mailUsername, mailPass, msg, fromMail, fromMail, sub)
+sendMail(host, port, mailUsername, mailPass, msg, fromMail, [fromMail], sub)
