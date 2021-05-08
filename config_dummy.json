@@ -7,5 +7,6 @@
     "fromMail": "from@outlook.com",
     "toMails": ["to@outlook.com"],
     "numDays": 1,
-    "mailIdleMinutes": 15
+    "mailIdleMinutes": 15,
+    "minAge": 45
 }

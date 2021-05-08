@@ -1,6 +1,7 @@
 project_env/
 node_modules/
 logs/
+configs/*.json
 config.json
 data/
 __pycache__
