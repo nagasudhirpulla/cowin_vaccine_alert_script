@@ -43,8 +43,8 @@ def checkSessions(reqDt):
                 msg = "Please check Cowin portal <a href=https://www.cowin.gov.in/home>https://www.cowin.gov.in/home</a> for vaccine booking on {0} for minimum age {1} <br> ".format(
                     reqDtStr, minAge)
                 try:
-                    capacityStrs = ["Available capacity = {0}, {1}, {2}".format(
-                        c["available_capacity"], c["name"], c["address"]) for c in capacityInfos]
+                    capacityStrs = ["Available capacity = {0}, {1}, {2}, {3}".format(
+                        c["available_capacity"], c["vaccine"], c["name"], c["address"]) for c in capacityInfos]
                     distName = capacityInfos[0]["district_name"]
                 except:
                     capacityStrs = [str(c) for c in capacityInfos]
